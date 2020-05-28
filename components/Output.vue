@@ -5,6 +5,7 @@
       v-if="content !== ''"
       class="output-text"
       readonly
+      title="Textarea for text translated"
     />
     
     <button 
@@ -61,7 +62,7 @@ export default {
 }
 .output-text {
   width: 100%;
-  height: 100px;
+  height: 50px;
   outline: none;
   resize: none;
   border-radius: 5px;

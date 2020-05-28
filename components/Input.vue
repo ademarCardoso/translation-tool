@@ -3,6 +3,7 @@
     <textarea 
       v-model="textToTranslate"
       class="input-text"
+      title="Textarea for iput text to translate"
     />
 
     <Output :content="translatedText"/>
@@ -16,9 +17,11 @@ import Output from '../components/Output'
 
 export default {
   name: "Input",
+
   components: {
     Output
   },
+
   props: {
     from: {
       type: String,
@@ -45,7 +48,7 @@ export default {
         this.translatedText = await translator(this.textToTranslate, this.from, this.to)
         console.log(this.translatedText)
       }
-    }, 500)
+    }, 400)
   }
 }
 </script>
@@ -53,7 +56,7 @@ export default {
 <style>
 .input-text {
   width: 100%;
-  height: 100px;
+  height: 50px;
   outline: none;
   resize: none;
   border-radius: 5px;
