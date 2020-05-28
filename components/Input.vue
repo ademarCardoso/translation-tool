@@ -1,6 +1,9 @@
 <template>
   <div>
-    <textarea v-model="textToTranslate" />
+    <textarea 
+      v-model="textToTranslate"
+      class="input-text"
+    />
 
     <Output :content="translatedText"/>
   </div>
@@ -48,5 +51,14 @@ export default {
 </script>
 
 <style>
-
+.input-text {
+  width: 100%;
+  height: 100px;
+  outline: none;
+  resize: none;
+  border-radius: 5px;
+  border: none;
+  padding: 3px;
+  margin-top: 5px;
+}
 </style>

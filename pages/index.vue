@@ -1,13 +1,23 @@
 <template>
-  <div>
-    <h1>Content translate</h1>
+  <div class="input-select">
     <select v-model="source">
-      <option v-for="option in options" v-bind:value="option.value" :key="option.id">
+      <option
+        v-for="option in options" 
+        :value="option.value" 
+        :key="option.id"
+      >
         {{ option.text }}
       </option>
     </select>
+
+    <span class="input-to">&#8594;</span>
+
     <select v-model="target">
-      <option v-for="option in options" v-bind:value="option.value" :key="option.id">
+      <option
+        v-for="option in options" 
+        :value="option.value" 
+        :key="option.id"
+      >
         {{ option.text }}
       </option>
     </select>
@@ -33,22 +43,37 @@ export default {
       { text: 'Portuguese', value: 'pt' },
       { text: 'English', value: 'en' },
       { text: 'Russian', value: 'ru' },
-      { text: 'Deutsch', value: 'de' }
+      { text: 'Deutsch', value: 'de' },
+      { text: 'French', value: 'fr' },
+      { text: 'Slovak', value: 'sk' }
     ]
-    }
-  },
-
-  computed: {
-    translateTo() {
-      retu
     }
   },
 
   methods: {
     async loadUserInfo() {
-      // this.pimba = await translate("Um gato", "pt", "en")
-      // console.log(this.pimba)
+      
     },
   }
 }
 </script>
+
+<style>
+.input-select {
+  width: 100%;
+  height: 40px;
+}
+
+.input-select select {
+  outline: none;
+  font-size: 14px;
+  width: 45%;
+   /* display: flex; */
+  justify-content: space-between;
+}
+
+.input-to {
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
