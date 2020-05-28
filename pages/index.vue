@@ -1,5 +1,6 @@
 <template>
   <div class="input-select">
+    <h2 style="text-align: center;">Translate app</h2>
     <select v-model="source">
       <option
         v-for="option in options" 
@@ -40,13 +41,13 @@ export default {
       source: 'English',
       target: 'Deutsch',
       options: [
-      { text: 'Portuguese', value: 'pt' },
-      { text: 'English', value: 'en' },
-      { text: 'Russian', value: 'ru' },
-      { text: 'Deutsch', value: 'de' },
-      { text: 'French', value: 'fr' },
-      { text: 'Slovak', value: 'sk' }
-    ]
+        { text: 'Portuguese', value: 'pt' },
+        { text: 'English', value: 'en' },
+        { text: 'Russian', value: 'ru' },
+        { text: 'Deutsch', value: 'de' },
+        { text: 'French', value: 'fr' },
+        { text: 'Slovak', value: 'sk' }
+      ]
     }
   },
 
