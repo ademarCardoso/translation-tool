@@ -1,12 +1,20 @@
 <template>
   <div>
-    <input type="text">
+    <textarea v-model="content.output" v-if="content !== ''"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Output"
+  name: "Output",
+
+  props: {
+    content: {
+      type: String,
+      required: true,
+      default: () => ''
+    }
+  }
 }
 </script>
 

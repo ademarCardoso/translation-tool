@@ -1,56 +1,54 @@
 <template>
   <div>
-    <h1>Hello world!</h1>
-    <p v-if="!loadingContext">
-      You are currently editing "{{ story.name }}"
-    </p>
+    <h1>Content translate</h1>
+    <select v-model="source">
+      <option v-for="option in options" v-bind:value="option.value" :key="option.id">
+        {{ option.text }}
+      </option>
+    </select>
+    <select v-model="target">
+      <option v-for="option in options" v-bind:value="option.value" :key="option.id">
+        {{ option.text }}
+      </option>
+    </select>
+
+    <Input :from="source" :to="target" />
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import translate from '../service/index'
+import Input from '../components/Input'
 
 export default {
+  components: {
+    Input
+  },
+
   data() {
     return {
-      story: {},
-      loadingContext: true
+      source: 'English',
+      target: 'Deutsch',
+      options: [
+      { text: 'Portuguese', value: 'pt' },
+      { text: 'English', value: 'en' },
+      { text: 'Russian', value: 'ru' },
+      { text: 'Deutsch', value: 'de' }
+    ]
     }
   },
 
-  mounted() {
-    if (window.top === window.self) {
-      window.location.assign('https://app.storyblok.com/oauth/tool_redirect')
+  computed: {
+    translateTo() {
+      retu
     }
-
-    window.addEventListener('message', this.processMessage, false)
-
-    // Use getContext to get the current story
-    window.parent.postMessage({action: 'tool-changed', tool: 'storyblok@first-tool', event: 'getContext'}, 'https://app.storyblok.com')
-    
-    // Use heightChange to change the height of the tool
-    // window.parent.postMessage({action: 'tool-changed', tool: 'storyblok@first-tool', event: 'heightChange', height: 500}, 'https://app.storyblok.com')
-
-    // Example to get the user info
-    axios
-      .get('/auth/user', {params: {space_id: this.$route.query.space_id}})
-      .then((response) => {
-        console.log(response.data)
-      })
-
-    axios
-      .get(`/auth/spaces/${this.$route.query.space_id}/stories`)
-      .then((response) => {
-        console.log(response.data)
-      })
   },
+
   methods: {
-    processMessage(event) {
-      if (event.data && event.data.action == 'get-context') {
-        this.loadingContext = false
-        this.story = event.data.story
-      }
-    }
+    async loadUserInfo() {
+      // this.pimba = await translate("Um gato", "pt", "en")
+      // console.log(this.pimba)
+    },
   }
 }
 </script>

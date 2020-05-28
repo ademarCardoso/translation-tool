@@ -1,7 +1,7 @@
 import axios from 'axios'
 const apiKey = "249355fd66mshce23ef53b26eaf8p19a135jsnf0fec768adff"
 
-async function translate (text, source, target ) {
+async function translator (text, source, target ) {
   return await axios({
     "method": "GET",
     "url": "https://systran-systran-platform-for-language-processing-v1.p.rapidapi.com/translation/text/translate",
@@ -16,11 +16,11 @@ async function translate (text, source, target ) {
     }
     })
     .then((response) => {
-      return response
+      return response.data.outputs[0]
     })
     .catch((error) => {
       console.log(error)
     })
 }
 
-export default translate
+export default translator
