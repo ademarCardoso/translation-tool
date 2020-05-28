@@ -10,7 +10,7 @@
       </option>
     </select>
 
-    <span class="input-to">&#8594;</span>
+    <button class="input-reverse" @click="revertLang">&#8594;</button>
 
     <select v-model="target">
       <option
@@ -51,9 +51,11 @@ export default {
   },
 
   methods: {
-    async loadUserInfo() {
-      
-    },
+    revertLang() {
+      let aux = this.source
+      this.source = this.target
+      this.target = aux
+    }
   }
 }
 </script>
@@ -67,13 +69,16 @@ export default {
 .input-select select {
   outline: none;
   font-size: 14px;
-  width: 45%;
-   /* display: flex; */
+  width: 43%;
   justify-content: space-between;
 }
 
-.input-to {
+.input-reverse {
   font-size: 20px;
   font-weight: bold;
+  background-color: transparent !important;
+  border: none;
+  width: 25px;
+  padding: 0;
 }
 </style>

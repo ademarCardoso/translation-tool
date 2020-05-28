@@ -2,7 +2,7 @@
   <div class="output-container">
     <textarea 
       v-model="content.output"
-      v-if="content !== ''"
+      v-if="content.output"
       class="output-text"
       readonly
       title="Textarea for text translated"
@@ -10,7 +10,7 @@
     
     <button 
       @click="copyContentToClipBoard"
-      v-if="content !== ''"
+      v-if="content.output"
       class="output-copy">
         <span v-if="show">Copy to clipboard</span>
         <span v-else>Copied &#10003;</span>
@@ -67,6 +67,7 @@ export default {
   resize: none;
   border-radius: 5px;
   border: none;
+  font-size: 15px;
 }
 
 .output-copy {
