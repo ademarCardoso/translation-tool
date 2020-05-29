@@ -2,6 +2,8 @@
   <h1 align="center">Example translation application for storyblok</h1>
 </p>
 
+<center><img width="430" height="580" src="https://a.storyblok.com/f/74682/684x1086/03dc555c9b/screen-shot-2020-05-29-at-10-06-19.png" title="Image of app translation"/></center>
+
 ## Installation
 
 Clone this project with:
