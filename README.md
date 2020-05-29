@@ -2,7 +2,7 @@
   <h1 align="center">Example translation application for storyblok</h1>
 </p>
 
-<center><img width="453" heigth="702" src="https://a.storyblok.com/f/74682/720x1116/026322a157/screen-shot-2020-05-29-at-11-50-07.png" title="Image of app translation"/></center>
+<p align="center"><img width="453" heigth="702" src="https://a.storyblok.com/f/74682/720x1116/026322a157/screen-shot-2020-05-29-at-11-50-07.png" title="Image of app translation"/></p>
 
 ## Installation
 
