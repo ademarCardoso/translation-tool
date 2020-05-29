@@ -7,7 +7,7 @@
 Clone this project with:
 
 ```bash
-$ git clone #link
+$ git clone https://github.com/ademarCardoso/translation-tool.git
 ```
 
 ### Install all dependencies
@@ -36,6 +36,10 @@ yarn dev #or npm run dev
 
 ### About the translation api
 The translation api is [this](https://english.api.rakuten.net/systran/api/systran-io-translation-and-nlp?endpoint=568bd090e4b0e203818a59f0), the application was made using this free api, but you can change it if you feel better.
+You need to register to have an apiKey, the service is free :)
+
+#### For more information
+If you want a boilerplate to start your own tool, take a look at this [repository](https://github.com/storyblok/storyblok-tool-example).
 
 
 ---
