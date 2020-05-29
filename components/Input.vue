@@ -67,5 +67,6 @@ export default {
   padding: 3px;
   margin-top: 5px;
   font-size: 15px;
+  box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.2);
 }
 </style>

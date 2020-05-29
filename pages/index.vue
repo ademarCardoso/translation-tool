@@ -97,6 +97,7 @@ export default {
   -webkit-appearance: none !important;
   height: 23px;
   padding-left: 5px;
+  margin-left: 3px;
 }
 
 .icon_select {
